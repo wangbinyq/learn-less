@@ -1,0 +1,42 @@
+@nice-blue: #5b83ad;
+@light-blue: @nice-blue + #111111;
+
+#header {
+  color: @light-blue;
+}
+
+.bordered {
+  border-top: dotted 1px black;
+  border-bottom: solid 2px black;
+}
+
+#menu a {
+  color: #111;
+  .bordered;
+}
+
+.post a {
+  color: red;
+  .bordered;
+}
+
+@w: 20mm;
+@testunit: @w * 30cm;
+
+.testunit {
+  width: @testunit;
+}
+
+.bundle  {
+  .button {
+    background: @nice-blue;
+    color: white;
+  }
+}
+
+.testnamespace {
+  .bundle > .button;
+  color: @yellow;
+}
+
+@yellow: multiply(red, green);
